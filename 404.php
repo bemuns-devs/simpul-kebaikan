@@ -7,7 +7,7 @@
  */
 
 get_header(); ?>
-<main class="container pt-5 pb-5">
+<main class="container ptb-bem-1">
   <section class="row d-flex flex-wrap flex-row-reverse justify-content-center align-items-center">
     <figure class="col-md-6 mb-0">
       <img src="<?php bloginfo( 'template_url' ) ?>/img/404-animated.svg" alt="">
