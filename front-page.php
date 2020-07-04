@@ -71,7 +71,7 @@
       </h2>
     </header>
     <div class="grid-container artikel-container">
-      <?php $latest_blog_posts = new WP_Query(array('posts_per_page' => 4));?>
+      <?php $latest_blog_posts = new WP_Query(array('posts_per_page' => 3));?>
       <?php if($latest_blog_posts->have_posts()) : ?>
         <?php while($latest_blog_posts->have_posts() ) : $latest_blog_posts->the_post(); ?>
         <section class="artikel shadow">

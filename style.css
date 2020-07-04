@@ -4,7 +4,7 @@ Theme URI: https://github.com/aksalsf/wp_bluebem
 Author: Aksal SF
 Author URI: https://github.com/aksalsf
 Description: WP Bluebem merupakan tema WordPress yang dikembangkan untuk website BEM UNS 2020 Kabinet Simpul Kebaikan.
-Version: 1.0
+Version: 1.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
@@ -176,7 +176,7 @@ div.reply {
   margin-bottom: 0.5rem;
 }
 
-a.comment-reply-link, .form-submit .submit, .nav-previous a, .nav-next a, a.error__back-home {
+a.comment-reply-link, .form-submit .submit, .nav-previous a, .nav-next a, a.error__back-home, .btn-solid-lg {
   color: #FFFFFF;
   padding: 0.5rem;
   background-color: #f7a338;
@@ -186,12 +186,12 @@ a.comment-reply-link, .form-submit .submit, .nav-previous a, .nav-next a, a.erro
   transition: all 0.5s;
 }
 
-a.comment-reply-link:hover, .form-submit .submit:hover, .nav-previous:hover, .nav-next:hover, a.error__back-home:hover {
+a.comment-reply-link:hover, .form-submit .submit:hover, .nav-previous:hover, .nav-next:hover, a.error__back-home:hover, .btn-solid-lg:hover {
   box-shadow: inset 0 -2px 0 rgba(0,0,0,0.125);
   filter: brightness(90%);
 }
 
-a.comment-reply-link:active, .form-submit .submit:active, .nav-previous:active, .nav-next:active, a.error__back-home:active {
+a.comment-reply-link:active, .form-submit .submit:active, .nav-previous:active, .nav-next:active, a.error__back-home:active, .btn-solid-lg:active {
   box-shadow: inset 0 4px 0 rgba(0,0,0,0.125);
 }
 
@@ -229,4 +229,36 @@ a.comment-reply-link:active, .form-submit .submit:active, .nav-previous:active, 
 
 .error__message {
   font-size: 1.25rem;
+}
+
+#jp-relatedposts h3.jp-relatedposts-headline {
+	font-size: 1.5rem;
+}
+
+#jp-relatedposts .jp-relatedposts-items-visual .jp-relatedposts-post {
+	opacity: 1;
+	padding: 0;
+	margin-right: 20px;
+	width: 25%;
+    border: 1px solid rgba(0,0,0,0.125);
+    box-shadow: inset 0 -4px 0 rgba(0,0,0,0.125);
+	background: #FFFFFF;
+	border-radius: 0.25rem;
+}
+
+@media (max-width: 920px) {
+	#jp-relatedposts .jp-relatedposts-items-visual .jp-relatedposts-post {
+		width: 100%;
+	}
+}
+h4.jp-relatedposts-post-title {
+	padding: 1rem 0.5rem;
+}
+
+#jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-title a {
+	font-size: 14px;
+	font-family: 'Montserrat', sans-serif;
+	background: none;
+	color: #000;
+	border-bottom: none;
 }

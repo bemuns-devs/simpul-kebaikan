@@ -25,18 +25,18 @@
       <link rel="shortcut icon" href="<?php site_icon_url(); ?>">
     <?php endif; ?>
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <!-- Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Source+Sans+Pro&display=swap" rel="stylesheet">
-    <!-- Custom CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <!-- Own CSS -->
     <link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>">
     <link rel="stylesheet" type="text/css" href="<?php bloginfo( 'template_url' ); ?>/css/main.css">
     <!-- Optional JavaScript -->
-    <script src="<?php bloginfo( 'template_url' ); ?>/js/all.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/js/all.min.js"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="<?php bloginfo( 'template_url' ); ?>/js/jquery-3.4.1.slim.min.js"></script>
-    <script src="<?php bloginfo( 'template_url' ); ?>/js/popper.min.js"></script>
-    <script src="<?php bloginfo( 'template_url' ); ?>/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.4.3/cjs/popper.min.js" integrity="sha512-Kx+RYN7yiqBzPABRlspwARxOL34sTtGjodXbfZl2g/Q0f6x+G3lS+0w453esA2s/yLYprJkTJVJ3HhesLe5kcQ==" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <script src="<?php bloginfo( 'template_url' ); ?>/js/custom.js"></script>
     <script type="text/javascript">
       $(function () {
@@ -44,8 +44,7 @@
       })
     </script>
     <title>
-      <?php bloginfo( 'name' ); ?>
-      <?php is_front_page() ? bloginfo( 'description' ) : wp_title(); ?>
+      <?php wp_title(); ?>
     </title>
     <?php wp_head(); ?>
   </head>
