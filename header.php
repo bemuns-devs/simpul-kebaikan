@@ -12,14 +12,23 @@
     <!-- Required meta tags -->
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Badan Eksekutif Mahasiswa Universitas Sebelas Maret Surakarta, Kabinet Simpul Kebaikan">
-    <meta name="keywords" content="BEM, UNS, Mahasiswa, Rakyat, Indonesia">
     <meta name="author" content="Aksal SF">
-    <!-- SEO Tag -->
-    <meta property="og:url" content="<?php is_front_page() ? bloginfo( 'url' ) : the_permalink(); ?>" />
-    <meta property="og:title" content="<?php is_front_page() ? bloginfo( 'name' ) : wp_title(); ?>" />
-    <meta property="og:description" content="<?php is_front_page() ? bloginfo( 'description' ) : the_excerpt(); ?>" />
-    <meta property="og:image" content="<?php the_post_thumbnail_url(); ?>" />
+	<!-- Primary Meta Tags -->
+	<meta name="title" content="Website Resmi BEM UNS 2020">
+	<meta name="description" content="Badan Eksekutif Mahasiswa (BEM) UNS adalah organisasi mahasiswa yang bergerak sebagai lembaga eksekutif yang berfungsi sebagai Pemerintahan Mahasiswa yang menjalankan mandat dari Dewan Mahasiswa (DEMA) untuk mengawal kebijakan UNS dan pemerintah, pengembangan SDM KBM UNS, advokasi mahasiswa, dan pengabdian masyarakat.">
+    <meta name="keywords" content="Badan Eksekutif Mahasiswa, Universitas Sebelas Maret, BEM UNS, Mahasiswa Indonesia, KBM UNS, UKM UNS, ORMAWA UNS">
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="http://bemuns.com/">
+	<meta property="og:title" content="Website Resmi BEM UNS 2020">
+	<meta property="og:description" content="Badan Eksekutif Mahasiswa (BEM) UNS adalah organisasi mahasiswa yang bergerak sebagai lembaga eksekutif yang berfungsi sebagai Pemerintahan Mahasiswa yang menjalankan mandat dari Dewan Mahasiswa (DEMA) untuk mengawal kebijakan UNS dan pemerintah, pengembangan SDM KBM UNS, advokasi mahasiswa, dan pengabdian masyarakat.">
+	<meta property="og:image" content="http://bemuns.com/wp-content/uploads/2020/07/Desktop-1.png">
+	<!-- Twitter -->
+	<meta property="twitter:card" content="summary_large_image">
+	<meta property="twitter:url" content="http://bemuns.com/">
+	<meta property="twitter:title" content="Website Resmi BEM UNS 2020">
+	<meta property="twitter:description" content="Badan Eksekutif Mahasiswa (BEM) UNS adalah organisasi mahasiswa yang bergerak sebagai lembaga eksekutif yang berfungsi sebagai Pemerintahan Mahasiswa yang menjalankan mandat dari Dewan Mahasiswa (DEMA) untuk mengawal kebijakan UNS dan pemerintah, pengembangan SDM KBM UNS, advokasi mahasiswa, dan pengabdian masyarakat.">
+	<meta property="twitter:image" content="http://bemuns.com/wp-content/uploads/2020/07/Desktop-1.png">
     <!-- Favicon -->
     <?php if(has_site_icon()) : ?>
       <link rel="shortcut icon" href="<?php site_icon_url(); ?>">
@@ -31,6 +40,10 @@
     <!-- Own CSS -->
     <link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>">
     <link rel="stylesheet" type="text/css" href="<?php bloginfo( 'template_url' ); ?>/css/main.css">
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<!-- Own JS -->
+	<script src="<?php bloginfo( 'template_url' ); ?>/js/custom.js"></script>
     <title>
       <?php wp_title(); ?>
     </title>

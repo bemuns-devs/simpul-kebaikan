@@ -224,6 +224,45 @@
             'settings'   => 'float-btn__color',
         ) )
     );
+
+    // Error Page
+    $wp_customize -> add_section('error-page', array(
+      'title' => __('Error Page', 'bluebem'),
+      'description' => sprintf(__('Mengubah pesan error di halaman page not found!', 'bluebem')),
+      'priority' => 170
+    ));
+
+    // Error Page Message
+    $wp_customize -> add_setting('error-page_text', array(
+      'default' => _x( 'Maaf, halaman yang Anda cari tidak dapat kami temukan. Barangkali halaman tersebut sudah kami hapus atau alamat URL yang Anda ketik kurang tepat.', 'bluebem' ),
+      'type' => 'theme_mod'
+    ));
+
+    $wp_customize -> add_control('error-page_text', array(
+      'label' => __('Error Page Message', 'bluebem'),
+      'section' => 'error-page',
+      'type' => 'textarea',
+      'priority' => 1
+    ));
+
+    // Post Number in Front Page
+    $wp_customize -> add_section('post-number', array(
+      'title' => __('Jumlah Artikel Halaman Utama', 'bluebem'),
+      'description' => sprintf(__('Mengubah jumlah postingan yang ditampilkan pada halaman utama (exclude pos yang disematkan)', 'bluebem')),
+      'priority' => 180
+    ));
+
+    // Post Number
+    $wp_customize -> add_setting('post-number_number', array(
+      'default' => _x( '4', 'bluebem' ),
+      'type' => 'theme_mod'
+    ));
+
+    $wp_customize -> add_control('post-number_number', array(
+      'label' => __('Jumlah Pos Halaman Utama', 'bluebem'),
+      'section' => 'post-number',
+      'priority' => 1
+    ));
   }
 
   add_action( 'customize_register', 'bluebem_customizer_register' );

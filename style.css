@@ -4,7 +4,7 @@ Theme URI: https://github.com/aksalsf/wp_bluebem
 Author: Aksal SF
 Author URI: https://github.com/aksalsf
 Description: WP Bluebem merupakan tema WordPress yang dikembangkan untuk website BEM UNS 2020 Kabinet Simpul Kebaikan.
-Version: 1.1
+Version: 2.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
@@ -231,34 +231,121 @@ a.comment-reply-link:active, .form-submit .submit:active, .nav-previous:active, 
   font-size: 1.25rem;
 }
 
-#jp-relatedposts h3.jp-relatedposts-headline {
-	font-size: 1.5rem;
+#jp-relatedposts .jp-relatedposts-items-visual {
+	display:flex;
+	flex-direction: row;
 }
 
 #jp-relatedposts .jp-relatedposts-items-visual .jp-relatedposts-post {
-	opacity: 1;
-	padding: 0;
-	margin-right: 20px;
-	width: 25%;
-    border: 1px solid rgba(0,0,0,0.125);
-    box-shadow: inset 0 -4px 0 rgba(0,0,0,0.125);
-	background: #FFFFFF;
-	border-radius: 0.25rem;
+    opacity: 1!important;
+    padding: 0!important;
+    margin-right: 20px!important;
+    border: 1px solid rgba(0,0,0,.125);
+    box-shadow: inset 0 -4px 0 rgba(0,0,0,.125);
+    background: #fff;
+    border-radius: .25rem;
 }
 
-@media (max-width: 920px) {
-	#jp-relatedposts .jp-relatedposts-items-visual .jp-relatedposts-post {
-		width: 100%;
-	}
+#jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-context, #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-date {
+	display: none!important;
 }
-h4.jp-relatedposts-post-title {
-	padding: 1rem 0.5rem;
+
+#jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post {
+	float: none!important;
+	margin: 0!important;
+}
+
+#jp-relatedposts .jp-relatedposts-items-visual h4.jp-relatedposts-post-title {
+	padding:1rem!important;
+    display: flex!important;
+    justify-content: center!important;
+    align-items: center!important;
+    text-align: center!important;
 }
 
 #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-title a {
-	font-size: 14px;
-	font-family: 'Montserrat', sans-serif;
-	background: none;
-	color: #000;
-	border-bottom: none;
+	font-family: "Montserrat", sans-serif!important;
+	font-size:1rem!important;
+	font-weight:600!important;
+}
+#jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-title a, a.jp-relatedposts-post-a {
+	border-bottom:none!important;
+	background:none!important;
+	transition:none!important;
+}
+#jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-title a:hover {
+	border-color: none;
+    color: #f7a338;
+}
+
+@media (max-width:720px) {
+	#jp-relatedposts .jp-relatedposts-items-visual {
+		flex-direction: column;
+	}
+	#jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post {
+		width:100%!important;
+		display: grid;
+		grid-template-columns: 1fr;
+		margin-bottom:1rem!important;
+	}
+	#jp-relatedposts .jp-relatedposts-items-visual h4.jp-relatedposts-post-title {
+		padding: 1.5rem 1rem!important;
+	}
+	#jp-relatedposts .jp-relatedposts-items-visual .jp-relatedposts-post img.jp-relatedposts-post-img {
+		height:100%;
+	}
+}
+
+/* PART 1 - Before Lazy Load */
+img[data-lazyloaded]{
+    opacity: 0;
+}
+
+/* PART 2 - Upon Lazy Load */
+img.litespeed-loaded{
+    -webkit-transition: opacity .25s linear 0.2s;
+    -moz-transition: opacity .25s linear 0.2s;
+    transition: opacity .5s linear 0.2s;
+    opacity: 1;
+}
+
+.komentar li {
+	list-style-type: none;
+}
+
+.ogranogram-title {
+  float: right;
+  transform: skew(-8deg) translateY(1rem);
+}
+
+.ogranogram-meta {
+  font-style: normal;
+  font-size: 18px;
+  transform: translateY(-1rem);
+  background-color: #FFFFFF;
+  border-radius: 1rem 1rem 0 0;
+  padding: 0.5rem 0 0 0;
+  box-shadow: inset 0 2px 0 rgba(0,0,0,.125);;
+}
+
+.ogranogram-meta p {
+	margin-bottom:0;
+}
+
+#subscribe-email input {
+	width: 100%;
+	padding: 0.25rem;
+}
+
+header.category__container h1 {
+  color: #0A71AC;
+}
+
+header.category__container p {
+  font-size: 18px;
+  margin-bottom: 0;
+}
+
+header.category__container hr {
+  margin-top: 0.25rem;
 }

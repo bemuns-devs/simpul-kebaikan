@@ -1,4 +1,4 @@
-// When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
+// // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
 window.onscroll = function() {scrollFunction()};
 function scrollFunction() {
 	document.getElementById("navbar-bem").style.transition = "all 0.5s";

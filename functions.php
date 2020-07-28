@@ -137,7 +137,7 @@ function bluebem_init_widget($id) {
 		'after_title' => '</h2>'
 	));
 
-	// Tentang Kami
+	// Media Sosial
 	register_sidebar(array(
 		'name' => 'Media Sosial',
 		'id' => 'medsos',

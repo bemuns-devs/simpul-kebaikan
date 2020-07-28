@@ -46,6 +46,10 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	color: #0a71ac !important;
 }
 
+.text-jingga {
+	color: #f7a338 !important;
+}
+
 .bg-jingga {
   background: #f7a338;
 }
@@ -110,13 +114,14 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 a.dropdown-item {
   color: #FFFFFF;
-  padding: .25rem 1.5rem;
+  padding: .5rem 1.5rem;
   text-transform: uppercase;
   font: 400 0.75rem/2rem "Montserrat", sans-serif;
 }
 
-.dropdown-item:focus, .dropdown-item:hover {
-  color: #f7a338;
+.dropdown-item:focus, .dropdown-item:hover, .dropdown-item:active {
+	background: #FFFFFF;
+    color: #f7a338;
 }
 
 .btn-jingga {
@@ -130,14 +135,14 @@ a.dropdown-item {
     transition: all 0.5s;
     box-shadow: inset 0 -4px 0 rgba(0,0,0,0.125);
 }
-
+.btn-jingga:hover {
+  box-shadow: inset 0 -3px 0 rgba(0,0,0,0.125);
+	transform: translateY(-2px);
+	color:#FFF;
+}
 .btn-jingga:active {
   box-shadow: inset 0 4px 0 rgba(0,0,0,0.125);
-}
-
-.btn-jingga:hover {
-  filter: brightness(90%);
-  color: #ffffff;
+	transform: translateY(4px);
 }
 
 .m-bem {
@@ -154,11 +159,13 @@ a.dropdown-item {
 }
 
 .ptb-bem-1 {
-  padding: 7% 0;
+	padding-top: 7%;
+	padding-bottom: 7%;
 }
 
 .ptb-bem-2 {
-  padding: 10% 0;
+	padding-top: 10%;
+	padding-bottom: 10%;
 }
 
 .grid-container {
@@ -179,11 +186,13 @@ a.dropdown-item {
 }
 
 .mtb-2 {
-  margin: 2rem 0;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
 }
 
 .ptb-2 {
-  padding: 2rem 0;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
 }
 
 .artikel-container {
@@ -265,11 +274,15 @@ a.unscare-float-btn:active {
 
 .artikel-body {
   padding: 0;
-  color: rgba(0,0,0,0.9);
+  color: #191919;
 }
 
-.artikel-body p, .artikel-body a, .artikel-body blockquote {
+.artikel-body p, .artikel-body a, .artikel-body blockquote, .artikel-body ol li, .artikel-body ul li {
   font-size: 18px;
+}
+
+.artikel-body p {
+	font-weight:500;
 }
 
 .artikel-body a {
@@ -465,7 +478,7 @@ figcaption {
   background: #f7a338;
   border-radius: 0.25rem;
   border: 0;
-  padding: 0.25rem 0.5rem;
+  padding: 0.25rem 0.75rem;
 }
 
 .widget-container button:hover, .widget-container input[type="submit"]:hover {
@@ -482,7 +495,34 @@ figcaption {
 }
 
 .widget-container ul {
-  list-style-type: square;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-gap: 1rem;
+}
+
+.widget-container ul li {
+  display: grid;
+  grid-template-columns: 0 1fr 0.125fr;
+  grid-gap: 1.75em;
+  align-items: start;
+  font-size: 18px;
+  line-height: 1.25;
+}
+
+.widget-container ul li:before {
+  content: "#";
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  color:#F7A338;
+}
+
+.widget-container ul li a {
+	color: #212529;
+	font-weight: bold;
+	font-family: 'Montserrat', sans-serif;
 }
 
 .recent-item {
@@ -592,20 +632,27 @@ figcaption {
 
 }
 
+@media (min-width: 993px) {
+	ul.navbar-nav li.nav-item a.nav-link {
+		margin-right: 0.5rem;
+	}
+}
+
 @media (max-width: 992px) {
   .navbar-nav {
-    height: 100%; /* 100% Full-height */
     width: 100%; /* 0 width - change this with JavaScript */
+	height: 100%;
     position: fixed; /* Stay in place */
     z-index: 1; /* Stay on top */
     right: 0;
     background-color: #0a71ac;
     overflow-x: hidden; /* Disable horizontal scroll */
+	overflow-y: auto;
+	box-shadow:inset 0 -4px 0 rgba(0,0,0,.125);
   }
 
   .nav-item {
       text-align: center;
-      padding: 1rem 0;
   }
 
   .misi-container-item {
@@ -614,8 +661,8 @@ figcaption {
   }
 
   .mtb-bem-2 {
-    margin-top: 20%;
-    margin-bottom: 20%;
+    margin-top: 7rem;
+    margin-bottom: 5rem;
   }
 
   .ptb-bem-1,.ptb-bem-2 {
